@@ -10,11 +10,50 @@ namespace _3_1020
     {
         static void Main(string[] args)
         {
+            //suma gauss
             Console.WriteLine("Introduceti un numar natural ");
-            int n = int.Parse(Console.ReadLine());
-            int suma;
-            suma = n * (n + 1) / 2;
-            Console.WriteLine($"Suma numerelor de la 1 la {n} este {suma}");
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
+
+            if(a<b)
+            {
+                if(a<c)
+                {
+                    Console.WriteLine($"{a} ");
+                    if(b<c)
+                    {
+                        Console.WriteLine($"{b} {c}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{c} {b}");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"{c} {a} {b}");
+                }
+            }
+            else
+            {
+                if (b < c)
+                {
+                    Console.WriteLine($"{b}");
+                    if (a < c)
+                    {
+                        Console.WriteLine($"{a} {c}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{c} {a}");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"{c} {b} {a}");
+                }
+            }
         }
     }
 }
